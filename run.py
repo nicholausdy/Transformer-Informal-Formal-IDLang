@@ -14,6 +14,9 @@ ff_dim = 16
 batch_size = 8
 epochs = 70
 
+# test parameters
+test_batch_size = 5
+
 # saving model
 model_name = "./result/saved_model"
 csv_file = "./result/training_log.csv"
@@ -35,6 +38,11 @@ def pipeline():
         x_train_arr, data.y_train, batch_size, epochs, shuffle=True,
         validation_data=(x_val_arr, data.y_val),
     )
+
+    # Test model
+    test_result = transformer.model.evaluate(x_val_arr, data.y_val, test_batch_size)
+    print("test loss, test accuracy:", test_result)
+
 
     # save model
     transformer.model.save(model_name)

@@ -22,11 +22,12 @@ def pipeline():
     data = DataLoader(filename, train_proportion)
 
     vocab_size = data.x_train.shape[1]
+    maxlen = vocab_size # max number of words to be considered in each sentence
     x_train_arr = data.x_train.toarray()
     x_val_arr = data.x_val.toarray()
 
     # train and validate model
-    transformer = TransformerModel(vocab_size, embed_dim, num_heads, ff_dim)
+    transformer = TransformerModel(maxlen, vocab_size, embed_dim, num_heads, ff_dim)
     transformer.model.compile(optimizer="adam", loss="binary_crossentropy", metrics="accuracy")
     transformer.model.summary()
 

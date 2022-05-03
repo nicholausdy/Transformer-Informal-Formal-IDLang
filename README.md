@@ -25,7 +25,8 @@ python run.py
 
 ## Dataset
 1. Created by the author of this repository himself.
-2. The dataset is composed of 43 formal and 57 informal Indonesian sentences.
+2. The dataset is composed of 58 formal and 67 informal Indonesian sentences for a total of 125 sentences
+3. Dataset will be split into: training dataset (80 sentences), validation dataset (20 sentences), and test dataset (25 sentences) 
 
 ### References
 1. https://arxiv.org/abs/1706.03762 (the original paper on Transformer)

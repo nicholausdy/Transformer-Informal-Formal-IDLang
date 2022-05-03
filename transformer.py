@@ -40,7 +40,7 @@ class TokenAndPositionEmbedding(tf.keras.layers.Layer):
         return x + positions
 
 class TransformerModel():
-    def __init__(self, maxlen = 527, vocab_size = 527, embed_dim = 32, num_heads = 2, ff_dim = 32):
+    def __init__(self, maxlen = 660, vocab_size = 660, embed_dim = 32, num_heads = 2, ff_dim = 32):
         inputs = tf.keras.layers.Input(shape=(vocab_size,)) 
         embedding_layer = TokenAndPositionEmbedding(maxlen, vocab_size, embed_dim)  
         x = embedding_layer(inputs)

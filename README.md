@@ -22,6 +22,10 @@ Implementation of a Transformer model to differentiate between formal and inform
 python run.py
 ```
 3. The resulting model and training log are saved inside the "result/" folder at the end of training and validation.
+4. Run the command below to generate training and validation progression graphs
+```python
+python visualize.py
+```
 
 ## Dataset
 1. Created by the author of this repository himself.
